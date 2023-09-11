@@ -1,7 +1,7 @@
 
 interface PostPreviewInterface{
   title: string;
-  desc: string;
+  description: string;
   postText: string;
 }
 
@@ -11,7 +11,7 @@ export default function PostPreview(props: PostPreviewInterface){
     <div className="text-gray-300">
       <h1>{props.title}</h1>
       <div>
-        <p>{props.desc}</p>
+        <p>{props.description}</p>
         <p>{props.postText}</p>
       </div>
     </div>
