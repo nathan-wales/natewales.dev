@@ -9,7 +9,7 @@ import path from 'path';
 
 const postsDirectory = path.join(process.cwd(), 'app/posts/posts/');
 
-export function getAllPostIds(){
+function getAllPostIds(){
   const filenames = fs.readdirSync(postsDirectory);
   const ids:Array<number> = []
 
@@ -24,11 +24,16 @@ export function getAllPostIds(){
   return ids
 }
 
-function getAllPostPreviews(){
-
+export function getAllPostPreviews(){
+  const postIds: Array<number> = getAllPostIds()
+  const postPreviews = new Array;
+  postIds.forEach( postId => {
+    postPreviews.push(getPostPreview(postId));
+  })
+  return postPreviews
 }
 
-export function getPostPreview(id: number){
+function getPostPreview(id: number){
   ///Users/nathanwales/dev/personal-website/natewales.dev/app/posts/posts/1.json
   const jsonString = fs.readFileSync(postsDirectory + id.toString() + '.json', 'utf-8');
   const jsonData = JSON.parse(jsonString);

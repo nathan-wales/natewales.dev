@@ -1,13 +1,9 @@
 import PostPreview from "./post_preview"
-import { getPostPreview, getAllPostIds } from "./lib/posts"
+import { getAllPostPreviews } from "./lib/posts"
 
 export default function Posts() {
 
-  const postIds: Array<number> = getAllPostIds()
-  const postPreviews = new Array;
-  postIds.forEach( postId => {
-    postPreviews.push(getPostPreview(postId));
-  })
+  const postPreviews = getAllPostPreviews()
 
   return (
     <main>

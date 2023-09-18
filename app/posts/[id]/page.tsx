@@ -2,8 +2,7 @@ import { getPost } from "../lib/posts"
 
 export default function Page({ params }: { params: { id: string } }) {
   
-  const postId = +params.id;
-  const postJson = getPost(postId);
+  const postJson = getPost(+params.id);
   
   return (
     <div>
