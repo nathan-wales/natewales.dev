@@ -1,0 +1,8 @@
+{
+  "preview": {  
+    "id": 1,
+    "title": "initial commit",
+    "description": "this is the first post on my first real website"
+  },  
+  "postText": "I'll figure out how to format this later. Currently, I think a json array of paragraphs would be cool, but for now it'll just be this henious single blurb :shrug:"
+}
