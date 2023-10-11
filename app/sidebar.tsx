@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-//TODO Eventually wrap each item in round box
+//unless we end up storing the SVGs locally, I don't think it makes sense to extract generating these buttons into a helper method.
 export default function SideBar() {
   return (
     <nav className="flex flex-col text-xs bg-gray-800 text-white items-start h-screen w-14">
